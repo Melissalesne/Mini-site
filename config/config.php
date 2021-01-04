@@ -42,17 +42,27 @@ $dev_domains = [
  * 3. Définition des variables de base de données
  */
 
- $db_type = "msql"; 
- $db_host = null; 
- $db_port = 3306; 
- $db_user = null;
- $db_pass = null; 
- $db_schema = null;
- $db_charset = "utf8";
+ //$db_type = "msql"; 
+ //$db_host = null; 
+ //$db_port = 3306; 
+ //$db_user = null;
+ //$db_pass = null; 
+ //$db_schema = null;
+ //$db_charset = "utf8";
 
  // Connection a la base de donnees 
  $db = null; 
- 
+
+ // Test de l'existence du fichier "database.php" 
+ // Si "database.php" n'existe pas on arrete l'application
+ if(!file_exists("../config/database.php"))
+ {
+    die("Vous devez créer le fichier \"database.php\" dans l'espace de configuration");
+ }
+
+// Inclure la config de connexion à la BDD
+ require_once "../config/database.php";
+
 
 /**
  * 4. Définition des variables de routage
