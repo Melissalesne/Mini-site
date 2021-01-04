@@ -1,3 +1,3 @@
-Big News
+Mini-site
 App Directory
 le répertoire "app/" est le coeur de l'application.
