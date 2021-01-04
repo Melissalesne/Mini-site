@@ -28,8 +28,8 @@ const UTILS_PATH = "../utils/";
 // Environnement de développement ou production ?
 // les valeur peuvent être : "prod" ou "dev"
 // Par défaut, on considère que l'application s'exécute en environnement de PROD
-// $env = "prod";
-$env = null;
+$env = "prod";
+// $env = null;
 
 // Liste des domaines que l'on considères comme étant des environnements de développement
 $dev_domains = [
@@ -69,6 +69,20 @@ require_once "../config/database.php";
 /**
  * 4. Définition des variables de routage
  */
+
+
+// Définition de l'uri par défaut
+$uri = "/";
+
+// Définition de la table de routage par défaut
+$routes = [];
+
+// Contient les information de la route courante
+$route = [];
+
+
+require_once "../config/routes.php";
+
 
 /**
  * 5. Definition des exepressions régulières
