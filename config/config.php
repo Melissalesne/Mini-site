@@ -42,6 +42,18 @@ $dev_domains = [
  * 3. Définition des variables de base de données
  */
 
+ $db_type = "msql"; 
+ $db_host = null; 
+ $db_port = 3306; 
+ $db_user = null;
+ $db_pass = null; 
+ $db_schema = null;
+ $db_charset = "utf8";
+
+ // Connection a la base de donnees 
+ $db = null; 
+ 
+
 /**
  * 4. Définition des variables de routage
  */
