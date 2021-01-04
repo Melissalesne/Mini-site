@@ -28,13 +28,14 @@ const UTILS_PATH = "../utils/";
 // Environnement de développement ou production ?
 // les valeur peuvent être : "prod" ou "dev"
 // Par défaut, on considère que l'application s'exécute en environnement de PROD
-$env = "prod";
+// $env = "prod";
+$env = null;
 
 // Liste des domaines que l'on considères comme étant des environnements de développement
 $dev_domains = [
     "127.0.0.1",
     "localhost",
-    "Mini-site.local"
+    "mini-site.local"
 ];
 
 
@@ -42,26 +43,27 @@ $dev_domains = [
  * 3. Définition des variables de base de données
  */
 
- //$db_type = "msql"; 
- //$db_host = null; 
- //$db_port = 3306; 
- //$db_user = null;
- //$db_pass = null; 
- //$db_schema = null;
- //$db_charset = "utf8";
+// configurations de connections aux bases de données par défaut
+// $db_type = "mysql";
+// $db_host = null;
+// $db_port = 3306;
+// $db_user = null;
+// $db_pass = null;
+// $db_schema = null;
+// $db_charset = "utf8";
 
- // Connection a la base de donnees 
- $db = null; 
+// Connection a la bases de données
+$db = null;
 
- // Test de l'existence du fichier "database.php" 
- // Si "database.php" n'existe pas on arrete l'application
- if(!file_exists("../config/database.php"))
- {
-    die("Vous devez créer le fichier \"database.php\" dans l'espace de configuration");
- }
+// Test de l'existance du fichier "database.php"
+// Si "database.php" n'existe pas on arrete l'application
+if (!file_exists("../config/database.php"))
+{
+    die("Vous devez créer le fichier \"database.php\" dans l'espace de configurations");
+}
 
 // Inclure la config de connexion à la BDD
- require_once "../config/database.php";
+require_once "../config/database.php";
 
 
 /**
