@@ -28,9 +28,16 @@ if (!empty($_SERVER['REQUEST_URI']))
 // Recherche de l'URI dans le tableau de routage
 foreach ($routes as $route) 
 {
-    $rebase = $base.$route[1];
+    $path = $route[1];
+    
+    // On rebase l'information "path" de la déclaration de la route
+    if ($env == "dev")
+    {
+        $path = $base.$route[1];
+    }
+    
 
-    if ($rebase == $uri) 
+    if ($path == $uri) 
     {
         // Si la route est trouvé dans la table de routage on sort de la boucle
         // grace au mot clé "break;"
