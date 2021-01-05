@@ -71,6 +71,7 @@ require_once "../config/database.php";
  */
 // Redéfinit la base d'execution de l'application 
   $base = "/mini-site/public";
+  
 
 
 // Définition de l'uri par défaut

@@ -50,13 +50,3 @@ foreach ($routes as $route)
 
 
 
-echo "<hr>";
-var_dump( $_SERVER['REQUEST_URI'] );
-
-echo "<hr>";
-var_dump( $uri );
-echo "<hr>";
-echo "<pre>";
-print_r( $route );
-echo "</pre>";
-echo "<hr>";
