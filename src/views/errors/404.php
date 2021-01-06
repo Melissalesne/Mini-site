@@ -1,11 +1,10 @@
 <?php include_once "../src/views/layout/header.php"; ?>
 
+<h1>Ooops....</h1>
 
-Category - Index
+<p>La page n'existe pas.</p>
 
-<hr>
 
 <a href="<?= url("article_index") ?>">Lire nos articles</a>
-
 
 <?php include_once "../src/views/layout/footer.php"; ?>
