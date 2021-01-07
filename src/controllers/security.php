@@ -42,7 +42,10 @@ function security_register()
         echo "Enregistrement BDD<br>";
         echo "Redirection vers login<br>";
         exit;
+
+        redirectToRoute('register');
     }
+
 
     // 3. Integration de la vue
     include_once "../src/views/security/register.php";

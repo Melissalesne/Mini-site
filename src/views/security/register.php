@@ -25,6 +25,7 @@
             <div class="mb-3">
                 <label for="lastname">Nom</label>
                 <input type="text" class="form-control" id="lastname" name="lastname" value="<?= $lastname ?>">
+
             </div>
 
             <!-- Birthday -->
