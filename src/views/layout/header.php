@@ -12,7 +12,7 @@
 <body>
 
     <header class="main-header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
 
                 <a class="navbar-brand" href="<?= url("homepage", true) ?>"><?= WEBSITE_TITLE ?></a>
@@ -37,9 +37,36 @@
                     </ul>
 
                     <ul class="navbar-nav mb-2 mb-lg-0">
+                        <!--
                         <li class="nav-item">
                             <a class="nav-link active"  href="#">Article Total : <?= showTotalArticle() ?></a>
                         </li>
+                        -->
+
+
+                        <?php if ( isset($_SESSION['user']) ): ?>
+
+                        <!-- Menu utilisateur si celui-ci est identifié -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= url("account") ?>"><?= $_SESSION['user']['fullname'] ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= url("logout") ?>">Logout</a>
+                        </li>
+
+                        <?php else: ?>
+                        
+                        <!-- Menu utilisateur si celui-ci est anonyme -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= url("register") ?>">Inscription</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= url("login") ?>">Connexion</a>
+                        </li>
+
+                        <?php endif; ?>
+
+
                     </ul>
                 </div>
             </div>

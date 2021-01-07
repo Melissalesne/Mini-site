@@ -16,9 +16,33 @@ function security_login()
 
 function security_register()
 {
-    // 1. Recupération des "Models" / Données
+    // Age minimum
+    $min_age = 13;
 
+    // Dates pour le champs Birthday year
+    $date_start = date("Y") - $min_age;
+    $date_end = $date_start - 100 ;
+
+
+    // Default values
+    $firstname   = null;
+    $lastname    = null;
+    $birth_day   = null;
+    $birth_month = null;
+    $birth_year  = null;
+    $email       = null;
+
+    
+
+    // 1. Recupération des "Models" / Données
     // 2. Traitement des données
+    if ($_SERVER['REQUEST_METHOD'] === "POST")
+    {
+        echo "Traitement du form<br>";
+        echo "Enregistrement BDD<br>";
+        echo "Redirection vers login<br>";
+        exit;
+    }
 
     // 3. Integration de la vue
     include_once "../src/views/security/register.php";

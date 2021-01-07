@@ -4,9 +4,6 @@ HOMEPAGE DATA
 <hr>
 
 
-<?php 
-$fruits = ["Pommes", "Bananes"];
-dump($fruits);
-?>
+
 
 <?php include_once "../src/views/layout/footer.php"; ?>
