@@ -1,12 +1,11 @@
-</div><!-- End .container -->
+<?php
 
-<footer class="main-footer">
-    <div class="container">
-        <div class="text-center">
-            &copy; <?= date("Y") ?> Big News !
-        </div>
-    </div>
-</footer>
-
-</body>
-</html>
+if (!function_exists("dump"))
+{
+    function dump($data)
+    {
+        echo "<pre>";
+        print_r( $data );
+        echo "</pre>";
+    }
+}
