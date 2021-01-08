@@ -31,6 +31,8 @@ $routes = [
 
     // Read article
     ["article_read", "/article", "article:read", ["HEAD", "GET"]],
+    
+    ["article_create", "/article/create", "article:create", ["HEAD", "GET", "POST"]],
 
 
     // Catégorie
@@ -41,6 +43,9 @@ $routes = [
 
     // Read category
     ["category_read", "/category", "category:read", ["HEAD", "GET"]],
+
+    // Add Categ
+    ["category_create", "/category/create", "category:create", ["HEAD", "GET", "POST"]],
 
 
     // Pages de sécurité

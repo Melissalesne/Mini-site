@@ -5,7 +5,16 @@ Category - Index
 
 <hr>
 
-<a href="<?= url("article_index") ?>">Lire nos articles</a>
+<?php foreach ($categories as $category): ?>
+
+<div>
+    <?= $category->id ?> : 
+    <?= $category->name ?>
+
+    <a href="<?= url("category_read") ?>?id=<?= $category->id ?>">plus d'info</a>
+</div>
+
+<?php endforeach ?>
 
 
 <?php include_once "../src/views/layout/footer.php"; ?>
